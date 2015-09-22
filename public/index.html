@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Slide Control</title>
+    <style type="text/css" media="screen">
+      .button {
+        background-color: blue;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        width: 150px;
+        height: 75px;
+        margin: 75px;
+        font-size: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Slide Controls</h1>
+      <div class="button" id="broadcast-prev">Prev</div>
+      <div class="button" id="broadcast-next">Next</div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+      var socket = io.connect(":9917/", {
+        "connect timeout": 3000,
+        "reconnect": false
+      });
+
+      document.getElementById("broadcast-next").addEventListener("click", function() {
+        socket.emit("slide-update", "next");
+      }, false);
+
+      document.getElementById("broadcast-prev").addEventListener("click", function() {
+        socket.emit("slide-update", "prev");
+      }, false);
+
+
+    </script>
+
+  </body>
+</html>

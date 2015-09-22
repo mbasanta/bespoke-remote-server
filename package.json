@@ -1,0 +1,23 @@
+{
+  "name": "bespoke-remote-server",
+  "version": "0.0.0",
+  "description": "Remote NodeJS SocketIO server for bespoke.js presentations",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbasanta/bespoke-remove-server.git"
+  },
+  "author": "Matthew Basanta <matthew.basanta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mbasanta/bespoke-remove-server/issues"
+  },
+  "homepage": "https://github.com/mbasanta/bespoke-remove-server#readme",
+  "dependencies": {
+    "node-static": "^0.7.7",
+    "socket.io": "^1.3.7"
+  }
+}
