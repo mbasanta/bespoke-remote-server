@@ -18,11 +18,7 @@ function handleHTTP(req, res) {
 
   switch(path) {
     case '/':
-      res.writeHeader(200, {'Content-Type': 'text/html'});
-      res.end('Hello');
-      break;
-    case '/index.html':
-      fs.readFile(__dirname + path, function(error, data) {
+      fs.readFile(__dirname + '/index.html', function(error, data) {
         if (error) {
           res.writeHeader(404);
           res.end('foo oops, this doesn\'t exist - 404');
